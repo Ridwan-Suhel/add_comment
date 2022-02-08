@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Comment</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container d-flex">
+        <!-- site logo  -->
+        <div class="nav-brand">
+          <a href="https://github.com/Ridwan-Suhel/add_comment">
+            <img src="img/logo.png" alt="logo" />
+          </a>
+        </div>
+        <!-- main menu  -->
+        <ul class="nav-menu d-flex">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="delete.html">Delete item</a></li>
+          <li><a href="delegation.html">Add Item</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Signup</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="section-wrapper container">
+        <!-- user comment  -->
+        <section class="u-comment-section" id="comment-container">
+          <h2>Comments</h2>
+          <!-- single comment  -->
+          <div class="user-comment">
+            <div class="comment-top">
+              <img src="img/author_1.png" alt="image" />
+              <h4 class="user-name">Alex Hales</h4>
+            </div>
+            <p id="user-msg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              ipsum dolor sit amet consectetur adipisicing elit ipsum dolor sit
+              amet consectetur adipisicing elit.
+            </p>
+          </div>
+
+          <!-- single comment  -->
+          <div class="user-comment">
+            <div class="comment-top">
+              <img src="img/author_1.png" alt="image" />
+              <h4 class="user-name">Alex Hales</h4>
+            </div>
+            <p id="user-msg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              ipsum dolor sit amet consectetur adipisicing elit ipsum dolor sit
+              amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </section>
+        <!-- comment form -->
+        <aside class="comment-area">
+          <form action="">
+            <h4>Leave a comment</h4>
+            <div class="form-group">
+              <label for="">Message</label>
+              <textarea name="" id="textarea" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="">Name</label>
+              <input type="name" id="nameInput" class="name" required />
+            </div>
+            <p class="terms-agree">
+              Lorem ipsum dolor sit,<a href="#"> amet consectetur</a>
+              adipisicing elit. Similique eos atque dolorem quae molestias eius!
+              Ducimus.
+            </p>
+            <button class="btn" id="post-btn">Post Comment</button>
+          </form>
+        </aside>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

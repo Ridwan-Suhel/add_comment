@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    h1,
+    h2,
+    h3,
+    p,
+    input {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    input {
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <header class="header">
+      <div class="container d-flex">
+        <!-- site logo  -->
+        <div class="nav-brand">
+          <a href="https://github.com/Ridwan-Suhel/add_comment">
+            <img src="img/logo.png" alt="logo" />
+          </a>
+        </div>
+        <!-- main menu  -->
+        <ul class="nav-menu d-flex">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="delete.html">Delete item</a></li>
+          <li><a href="delegation.html">Add Item</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Signup</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <h2>More Events</h2>
+    </div>
+    <section class="container">
+      <h3 id="info-text">This is my information for deleting text</h3>
+      <input type="text" placeholder="Please type 'delete' " id="deleteInput" />
+      <br />
+      <button id="delete" disabled>Delete Button</button>
+    </section>
+    <!-- <script src="main.js"></script> -->
+    <script>
+      document.getElementById("delete").addEventListener("click", function () {
+        document.getElementById("info-text").style.display = "none";
+      });
+      //focus
+      document
+        .getElementById("deleteInput")
+        .addEventListener("focus", function () {
+          document.body.style.backgroundColor = "tomato";
+        });
+      //blur
+      document
+        .getElementById("deleteInput")
+        .addEventListener("blur", function () {
+          document.body.style.backgroundColor = "black";
+        });
+      //keyup
+      document
+        .getElementById("deleteInput")
+        .addEventListener("keyup", function (event) {
+          const deleteInput = document.getElementById("deleteInput");
+          const deleteBtn = document.getElementById("delete");
+          if (event.target.value == "delete") {
+            deleteBtn.removeAttribute("disabled");
+          } else {
+            deleteBtn.setAttribute("disabled", true);
+          }
+        });
+      //change
+      document
+        .getElementById("deleteInput")
+        .addEventListener("change", function (event) {
+          const deleteInput = document.getElementById("deleteInput");
+          if (event.target.value == "delete") {
+            deleteBtn.removeAttribute("disabled");
+          } else {
+            deleteBtn.setAttribute("disabled", true);
+          }
+        });
+    </script>
+  </body>
+</html>
